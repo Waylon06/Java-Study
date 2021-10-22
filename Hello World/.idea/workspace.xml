@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71871451-b65b-4af6-a5c0-5b5da1858d6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CASE02/src/hello/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CASE02/src/hello/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../case01/src/emo1/dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE04/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE04/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE04/CASE04.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE04/src/Classwork/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE04/src/Classwork/AnimalBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE04/src/Classwork/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE04/src/Classwork/Text.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE05/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE05/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE05/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE05/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE05/CASE05.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE05/src/Classwork/CaptureException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE06/src/Classwork/MyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CASE06/src/Classwork/Text.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/Java Code/javatest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CASE05" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -100,6 +112,7 @@
       <workItem from="1632453123927" duration="1209000" />
       <workItem from="1634262141715" duration="16000" />
       <workItem from="1634263191408" duration="34000" />
+      <workItem from="1634870256513" duration="1552000" />
     </task>
     <servers />
   </component>
