@@ -8,8 +8,21 @@ public class three {
         a=in.nextFloat();
         b=in.nextFloat();
         c=in.nextFloat();
-        if (a>b){
-
+        if(a<b){
+            Max=b;
+            b=a;
+            a=Max;
         }
+        if(a<c){
+            Max=c;
+            c=a;
+            a=Max;
+        }
+        if(b<c){
+            Max=c;
+            c=b;
+            b=Max;
+        }
+        System.out.println("abc从大到小排列为："+a+"\t"+b+"\t"+c);
     }
 }
