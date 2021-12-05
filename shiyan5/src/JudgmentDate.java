@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class JudgmentDate {
     public static void main(String[] args) {
         int c, f, y, m, d, S = 0;
-        int a[] = new int[]{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};         //闰年
-        int b[] = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};         //非闰年
+        int a[] = new int[]{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int b[] = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         System.out.println("请输入年份、月份、日期：");
         Scanner one = new Scanner(System.in);
         y = one.nextInt();
         Scanner two = new Scanner(System.in);
         m = two.nextInt();
         Scanner three = new Scanner(System.in);
-        d = three.nextInt();                               //赋值给年份（y）月份（m）日期（d）
+        d = three.nextInt();
         if (y % 4 == 0) {
             if (y % 100 == 0) {
                 c = 0;
@@ -28,12 +28,12 @@ public class JudgmentDate {
         } else {
             if (c == 0)
                 for (f = 0; f < m - 1; f++)
-                    S += b[f];                                      //循环体运算1~m-1月相加的天数 （非闰年）
+                    S += b[f];
             else if (c == 1)
                 for (f = 0; f < m - 1; f++)
-                    S += a[f];                                      //循环体运算1~m-1月相加的天数（闰年）      +
-            S = S + d;                                                //加上日期（d）
-            System.out.println("这是该年的第"+S+"天");                       //得出输入的年月日为该年的天数
+                    S += a[f];
+            S = S + d;
+            System.out.println("这是该年的第"+S+"天");
         }
     }
 }
