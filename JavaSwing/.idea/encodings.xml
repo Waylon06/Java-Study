@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/cn/itcast_01/FrameDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/cn/itcast_02/FrameDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/cn/itcast_02/FrameDemo2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/cn/itcast_02/事件监听机制.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/cn/itcast_06/KeyDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/cn/itcast_07/MenuDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/cn/itcast_07/MenuDemo2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/txz_demo/src/cn/itcast/txz/ui/MainFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/登录注册/src/cn/itcast/view/LoginJFrame.java" charset="UTF-8" />
+  </component>
+</project>
