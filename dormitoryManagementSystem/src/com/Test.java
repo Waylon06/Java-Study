@@ -1,9 +1,14 @@
 package com;
 
+import com.dao.AdminDao;
+import com.dao.UserDao;
+import com.pojo.Admin;
+import com.pojo.Student;
 import com.utils.Interface;
 import com.utils.MysqlConnect;
 
 import java.sql.*;
+import java.util.Scanner;
 
 public class Test extends Interface {
     private static Connection conn;
@@ -11,13 +16,45 @@ public class Test extends Interface {
     private static PreparedStatement insert, del, change, find;
     private static ResultSet rs;
     public static void main(String[] args) {
-        Interface login = new Interface();
-        login.regulator();
+        UserDao user = new UserDao();
+        try {
+            user.insert();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("请输入管理员账号");
+//        int aid = scanner.nextInt();
+//        scanner.nextLine();
+//        System.out.println("请输入管理员密码");
+//        String password = scanner.nextLine();
+//        try {
+//            AdminDao ad = new AdminDao();
+//            boolean login = new AdminDao().login(aid, password);
+//            if (login){
+//                System.out.println("登录成功");
+//                ad.judgePower();
+//            }else {
+//                System.out.println("登陆失败");
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+
+
+
+
+
+
+//        Interface login = new Interface();
+//        login.regulator();
 //        try {
 //            conn = MysqlConnect.getConn();
 //            stmt = conn.createStatement();
 //
-//            String sql = "select * from stuinformation";
+//            String sql = "select * from student";
 //            rs = stmt.executeQuery(sql);
 //
 //        if (null!= MysqlConnect.getConn()){
@@ -38,6 +75,7 @@ public class Test extends Interface {
 //            e.printStackTrace();
 //        }
 //
-//
     }
+
+
 }
