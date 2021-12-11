@@ -88,6 +88,9 @@ public class Admin {
             case 2 :user.del();
             break;
             case 3 :user.insert();
+            break;
+            case 4 :user.back();
+            break;
             default: System.out.println("您的输入有误");
         }
     }

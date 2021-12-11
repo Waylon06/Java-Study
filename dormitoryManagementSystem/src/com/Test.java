@@ -16,32 +16,26 @@ public class Test extends Interface {
     private static PreparedStatement insert, del, change, find;
     private static ResultSet rs;
     public static void main(String[] args) {
-        UserDao user = new UserDao();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入管理员账号");
+        int aid = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("请输入管理员密码");
+        String password = scanner.nextLine();
         try {
-            user.insert();
+            AdminDao ad = new AdminDao();
+            boolean login = new AdminDao().login(aid, password);
+            if (login){
+                System.out.println("登录成功");
+                ad.judgePower();
+            }else {
+                System.out.println("登陆失败");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("请输入管理员账号");
-//        int aid = scanner.nextInt();
-//        scanner.nextLine();
-//        System.out.println("请输入管理员密码");
-//        String password = scanner.nextLine();
-//        try {
-//            AdminDao ad = new AdminDao();
-//            boolean login = new AdminDao().login(aid, password);
-//            if (login){
-//                System.out.println("登录成功");
-//                ad.judgePower();
-//            }else {
-//                System.out.println("登陆失败");
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
 
 
 

@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class UserDao {
 
     private Connection conn = null;
-    private PreparedStatement prep = null, del, insert;
+    private PreparedStatement prep = null, del, insert1, insert2, back;
     private ResultSet rs = null;
 
     public void information() throws SQLException {
@@ -20,13 +20,14 @@ public class UserDao {
         conn = MysqlConnect.getConn();
         prep = conn.prepareStatement(sql1);
         ResultSet rs = prep.executeQuery();
+        System.out.println("学号"+"\t"+"姓名"+"\t"+"班级"+"\t\t"+"寝室楼"+"\t"+"楼层"+"\t"+"寝室号"+"\t"+"床位");
         while (rs.next()){
-            System.out.print(rs.getInt(1)+"\t");
+            System.out.print(rs.getInt(1)+"\t\t");
             System.out.print(rs.getString(2)+"\t");
             System.out.print(rs.getString(3)+"\t");
             System.out.print(rs.getString(4)+"\t");
-            System.out.print(rs.getInt(5)+"\t");
-            System.out.print(rs.getInt(6)+"\t");
+            System.out.print(rs.getInt(5)+"\t\t");
+            System.out.print(rs.getInt(6)+"\t\t");
             System.out.println(rs.getInt(7)+"\t");
         }
     }
@@ -55,13 +56,10 @@ public class UserDao {
         sc.nextLine();
         System.out.println("请输入需增加学生的姓名：");
         String sname = sc.nextLine();
-        sc.nextLine();
         System.out.println("请输入需增加学生的班级：");
         String classes = sc.nextLine();
-        sc.nextLine();
         System.out.println("请输入需增加学生的寝室楼：");
         String building = sc.nextLine();
-        sc.nextLine();
         System.out.println("请输入需增加学生的楼层：");
         int floor = sc.nextInt();
         sc.nextLine();
@@ -70,16 +68,36 @@ public class UserDao {
         sc.nextLine();
         System.out.println("请输入需增加学生的床位：");
         int bed = sc.nextInt();
-        String sql3 = "insert into student(sid, sname, classes, spower)   VALUES('"+sid+"','"+sname+"','"+classes+"',0);\n" +
-                "insert into building(building, floor, house, bed, sid, live)  VALUES('"+building+"','"+floor+"','"+house+"','"+bed+"','"+sid+"', 0);";
+        String sql3 = "insert into student(sid, sname, classes, spower)   VALUES('"+sid+"','"+sname+"','"+classes+"',0);";
+        String sql4 = "insert into building(building, floor, house, bed, sid, live)  VALUES('"+building+"','"+floor+"','"+house+"','"+bed+"','"+sid+"', 0);";
         conn = MysqlConnect.getConn();
-        insert = conn.prepareStatement(sql3);
-        int j = insert.executeUpdate();
-        if (j==0){
+        insert1 = conn.prepareStatement(sql3);
+        insert2 = conn.prepareStatement(sql4);
+        int i = insert1.executeUpdate();
+        int j = insert2.executeUpdate();
+        if (j == 0&&i == 0){
             System.out.println("增加失败");
         }
         else{
             System.out.println("增加成功");
+        }
+    }
+
+    public void back() throws SQLException {
+        System.out.println("以下是今天未归寝室的学生信息");
+        String sql5 = "select student.sid '学号', sname '姓名', classes '班级', building '寝室楼',floor '楼层', house '寝室号', bed '床位'  from student, building where student.sid = building.sid and back = 0 group by student.sid ";
+        conn = MysqlConnect.getConn();
+        back = conn.prepareStatement(sql5);
+        ResultSet rs = back.executeQuery();
+        System.out.println("学号"+"\t"+"姓名"+"\t"+"班级"+"\t\t"+"寝室楼"+"\t"+"楼层"+"\t"+"寝室号"+"\t"+"床位");
+        while (rs.next()){
+            System.out.print(rs.getInt(1)+"\t\t");
+            System.out.print(rs.getString(2)+"\t");
+            System.out.print(rs.getString(3)+"\t");
+            System.out.print(rs.getString(4)+"\t");
+            System.out.print(rs.getInt(5)+"\t\t");
+            System.out.print(rs.getInt(6)+"\t\t");
+            System.out.println(rs.getInt(7)+"\t");
         }
     }
 
