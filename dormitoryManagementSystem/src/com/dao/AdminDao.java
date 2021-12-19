@@ -36,23 +36,45 @@ public class AdminDao {
             return false;
         }
     }
-    public void judgePower() throws SQLException {
+
+    public void judgePower(int aid) throws SQLException {
         Admin ad = new Admin();
-        System.out.println("请再次输入您的管理员账号：");
-        Scanner sc = new Scanner(System.in);
-        int aid = sc.nextInt();
         String sql = "select power from admin where aid = "+aid;
         conn = MysqlConnect.getConn();
         prep = conn.prepareStatement(sql);
         ResultSet rs = prep.executeQuery();
-        while (rs.next()){
-            System.out.println(rs.getInt(1));
-        }
+        int i = 0;
         if (aid == 1){
-            ad.dormitoryAdmin();
+            while (i == 0){
+                ad.teacher();
+                System.out.println("输入0返回、输入其他数字退出：");
+                Scanner sc = new Scanner(System.in);
+                i = sc.nextInt();
+            }
         }
-        if (aid == 2){
-
+        else if (aid == 2){
+            while(i == 0){
+                ad.dormitoryAdmin();
+                System.out.println("输入0返回、输入其他数字退出：");
+                Scanner sc = new Scanner(System.in);
+                i = sc.nextInt();
+            }
+        }
+        else if (aid == 3){
+            while (i == 0) {
+                ad.root();
+                System.out.println("输入0返回、输入其他数字退出：");
+                Scanner sc = new Scanner(System.in);
+                i = sc.nextInt();
+            }
+        }
+        else if (aid >= 4){
+            while (i == 0) {
+                ad.assistant();
+                System.out.println("输入0返回、输入其他数字退出：");
+                Scanner sc = new Scanner(System.in);
+                i = sc.nextInt();
+            }
         }
     }
 

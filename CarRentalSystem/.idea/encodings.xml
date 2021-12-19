@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/CarRentalSystem/com/carData.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/CarRentalSystem/com/carFunction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/CarRentalSystem/com/carSysStart.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/CarRentalSystem/com/rootConsole.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/CarRentalSystem/com/userConsole.java" charset="GBK" />
+  </component>
+</project>

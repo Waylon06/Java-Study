@@ -4,6 +4,7 @@ import com.dao.AdminDao;
 import com.dao.UserDao;
 import com.pojo.Admin;
 import com.pojo.Student;
+import com.utils.AllUser;
 import com.utils.Interface;
 import com.utils.MysqlConnect;
 
@@ -16,6 +17,8 @@ public class Test extends Interface {
     private static PreparedStatement insert, del, change, find;
     private static ResultSet rs;
     public static void main(String[] args) {
+//        new AllUser().setVisible(true);
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入管理员账号");
@@ -28,7 +31,7 @@ public class Test extends Interface {
             boolean login = new AdminDao().login(aid, password);
             if (login){
                 System.out.println("登录成功");
-                ad.judgePower();
+                ad.judgePower(aid);
             }else {
                 System.out.println("登陆失败");
             }
