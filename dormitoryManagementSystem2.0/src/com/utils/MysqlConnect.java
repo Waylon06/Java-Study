@@ -6,7 +6,7 @@ public class MysqlConnect {
 
     private static String url = "jdbc:mysql://localhost:3306/dms?UseUnicode=true&characterEncoding=utf-8";
     private static String username = "root";
-    private static String password = "123456";
+    private static String password = "629000";
 
     public static Connection getConn() throws SQLException {
 

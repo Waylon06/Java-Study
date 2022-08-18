@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost_3306
+ Source Server         : Waylon
  Source Server Type    : MySQL
- Source Server Version : 50636
+ Source Server Version : 80029
  Source Host           : localhost:3306
  Source Schema         : dms
 
  Target Server Type    : MySQL
- Target Server Version : 50636
+ Target Server Version : 80029
  File Encoding         : 65001
 
- Date: 12/12/2021 00:40:51
+ Date: 27/05/2022 17:31:04
 */
 
 SET NAMES utf8mb4;
@@ -22,10 +22,10 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin`  (
-  `aid` int(255) NOT NULL AUTO_INCREMENT,
+  `aid` int(0) NOT NULL AUTO_INCREMENT,
   `aname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `apassword` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `power` int(255) NOT NULL,
+  `power` int(0) NOT NULL,
   `classes` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`aid`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
@@ -43,10 +43,10 @@ INSERT INTO `admin` VALUES (3, '监管者', '123456', 3, NULL);
 DROP TABLE IF EXISTS `building`;
 CREATE TABLE `building`  (
   `building` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `floor` int(255) NOT NULL,
-  `house` int(255) NOT NULL,
-  `bed` int(255) UNSIGNED NOT NULL,
-  `sid` int(255) NOT NULL,
+  `floor` int(0) NOT NULL,
+  `house` int(0) NOT NULL,
+  `bed` int(0) UNSIGNED NOT NULL,
+  `sid` int(0) NOT NULL,
   `live` int(1) UNSIGNED ZEROFILL NOT NULL,
   INDEX `sid`(`sid`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
@@ -67,12 +67,12 @@ INSERT INTO `building` VALUES ('博慧1', 4, 401, 1, 7, 0);
 -- ----------------------------
 DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student`  (
-  `sid` int(255) NOT NULL,
+  `sid` int(0) NOT NULL,
   `sname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `classes` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `spower` int(1) UNSIGNED ZEROFILL NOT NULL,
   `spassword` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `back` int(255) NULL DEFAULT NULL,
+  `back` int(0) NULL DEFAULT NULL,
   PRIMARY KEY (`sid`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 

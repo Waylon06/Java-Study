@@ -20,24 +20,24 @@ public class Test extends Interface {
 //        new AllUser().setVisible(true);
 
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("请输入管理员账号");
-//        int aid = scanner.nextInt();
-//        scanner.nextLine();
-//        System.out.println("请输入管理员密码");
-//        String password = scanner.nextLine();
-//        try {
-//            AdminDao ad = new AdminDao();
-//            boolean login = new AdminDao().login(aid, password);
-//            if (login){
-//                System.out.println("登录成功");
-//                ad.judgePower(aid);
-//            }else {
-//                System.out.println("登陆失败");
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入管理员账号");
+        int aid = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("请输入管理员密码");
+        String password = scanner.nextLine();
+        try {
+            AdminDao ad = new AdminDao();
+            boolean login = new AdminDao().login(aid, password);
+            if (login){
+                System.out.println("登录成功");
+                ad.judgePower(aid);
+            }else {
+                System.out.println("登陆失败");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
 
 
@@ -45,8 +45,8 @@ public class Test extends Interface {
 
 
 
-        Interface login = new Interface();
-        login.regulator();
+//        Interface login = new Interface();
+//        login.regulator();
 //        try {
 //            conn = MysqlConnect.getConn();
 //            stmt = conn.createStatement();

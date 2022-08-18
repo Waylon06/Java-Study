@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <environments default="developmentC3p0">
+        <environment id="developmentC3p0">
+            <transactionManager type="JDBC"/>
+            <dataSource type="DorySystem.utils.C3P0DateSourceFactory">
+                <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+                <property name="jdbcUrl"
+                          value="jdbc:mysql://localhost:3306/dorysystem?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
+                <property name="user" value="root"/>
+                <property name="password" value="629000"/>
+                <property name="initialPoolSize" value="5"/>
+                <property name="maxPoolSize" value="10"/>
+                <property name="minPoolSize" value="5"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="DorySystem/dao/Mapper.xml"/>
+    </mappers>
+
+</configuration>
